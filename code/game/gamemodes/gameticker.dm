@@ -389,6 +389,11 @@ var/datum/controller/gameticker/ticker
 
 		spawn
 			declare_completion()
+			if(update_waiting)
+				force_update_server()
+			if(buildchangechecked && nextbuild)
+				forcechangebuild(nextbuild)
+
 			if(config.map_voting)
 				//testing("Vote picked [chosen_map]")
 				vote.initiate_vote("map","The Server", popup = 1, weighted_vote = 1)

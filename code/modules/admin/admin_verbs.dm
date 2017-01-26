@@ -7,7 +7,8 @@ var/list/admin_verbs_default = list(
 	/client/proc/debug_variables,		/*allows us to -see- the variables of any instance in the game. +VAREDIT needed to modify*/
 	/client/proc/check_antagonists,		/*shows all antags*/
 	/datum/admins/proc/checkCID,
-	/datum/admins/proc/checkCKEY
+	/datum/admins/proc/checkCKEY,
+	/client/proc/adminchangebuild
 //	/client/proc/deadchat				/*toggles deadchat on/off*/
 	)
 var/list/admin_verbs_admin = list(
@@ -143,7 +144,8 @@ var/list/admin_verbs_server = list(
 	/client/proc/toggle_random_events,
 	/client/proc/check_customitem_activity,
 	/client/proc/dump_chemreactions,
-	/client/proc/save_coordinates
+	/client/proc/save_coordinates,
+	/client/proc/update_server
 	)
 var/list/admin_verbs_debug = list(
 	/client/proc/gc_dump_hdl,
